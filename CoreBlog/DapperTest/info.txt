@@ -1,0 +1,8 @@
+﻿
+http://www.codeproject.com/Articles/212274/A-Look-at-Dapper-NET
+https://github.com/StackExchange/dapper-dot-net
+https://github.com/StackExchange/dapper-dot-net/tree/master/Dapper
+
+
+https://gist.github.com/emp/930346
+http://stackoverflow.com/questions/5988127/where-to-put-sql-when-using-dapper

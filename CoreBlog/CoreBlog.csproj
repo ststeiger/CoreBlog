@@ -127,14 +127,35 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DapperTest\Controllers\ManagerController.cs" />
+    <Compile Include="DapperTest\Controllers\ProductController.cs" />
+    <Compile Include="DapperTest\Controllers\SubCategoryController.cs" />
+    <Compile Include="DapperTest\Extensions\IEnumerableExtensions.cs" />
+    <Compile Include="DapperTest\Models\Category.cs" />
+    <Compile Include="DapperTest\Models\Employee.cs" />
+    <Compile Include="DapperTest\Models\ImageSize.cs" />
+    <Compile Include="DapperTest\Models\Manager.cs" />
+    <Compile Include="DapperTest\Models\MeasurementUnit.cs" />
+    <Compile Include="DapperTest\Models\Model.cs" />
+    <Compile Include="DapperTest\Models\Product.cs" />
+    <Compile Include="DapperTest\Models\SubCategory.cs" />
+    <Compile Include="DapperTest\Repositories\BaseRepository.cs" />
+    <Compile Include="DapperTest\Repositories\HumanResourcesRepository.cs" />
+    <Compile Include="DapperTest\Repositories\ProductionRepository.cs" />
+    <Compile Include="DapperTest\Services\HumanResourcesService.cs" />
+    <Compile Include="DapperTest\Services\ProductionService.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="MyCode\dataReceiver.ashx.cs" />
+    <Compile Include="MyCode\JsonStreamingResult.cs" />
+    <Compile Include="MyCode\serialize.ashx.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <None Include="DapperTest\info.txt" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -148,6 +169,11 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Manager\Managers.aspx" />
+    <Content Include="Views\Product\CreateOrEdit.aspx" />
+    <Content Include="Views\Product\Products.aspx" />
+    <Content Include="Views\SubCategory\CreateOrEdit.aspx" />
+    <Content Include="Views\SubCategory\SubCategories.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -174,6 +200,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dapper\Dapper.csproj">
+      <Project>{ef745892-9a2e-4c8f-99c3-3fc4da07d568}</Project>
+      <Name>Dapper</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

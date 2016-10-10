@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBlog", "CoreBlog\CoreBl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBlog.Tests", "CoreBlog.Tests\CoreBlog.Tests.csproj", "{8D991BA0-473D-4A5B-9E48-827303C8B901}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dapper", "Dapper\Dapper.csproj", "{EF745892-9A2E-4C8F-99C3-3FC4DA07D568}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8D991BA0-473D-4A5B-9E48-827303C8B901}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D991BA0-473D-4A5B-9E48-827303C8B901}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D991BA0-473D-4A5B-9E48-827303C8B901}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF745892-9A2E-4C8F-99C3-3FC4DA07D568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF745892-9A2E-4C8F-99C3-3FC4DA07D568}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF745892-9A2E-4C8F-99C3-3FC4DA07D568}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF745892-9A2E-4C8F-99C3-3FC4DA07D568}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
