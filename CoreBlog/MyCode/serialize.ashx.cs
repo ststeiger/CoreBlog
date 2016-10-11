@@ -2,7 +2,7 @@
 using System.Web;
 
 
-namespace LargeObjectSerializer.ajax
+namespace CoreBlog
 {
 
 
@@ -11,19 +11,6 @@ namespace LargeObjectSerializer.ajax
     /// </summary>
     public class serialize : IHttpHandler
     {
-
-
-        public static string GetConnectionString()
-        {
-
-            System.Data.SqlClient.SqlConnectionStringBuilder csb = new System.Data.SqlClient.SqlConnectionStringBuilder();
-
-            csb.DataSource = @"VMSTZHDB\HBD_DBH";
-            csb.InitialCatalog = "HBD_CAFM3_Produktiv";
-            csb.IntegratedSecurity = true;
-
-            return csb.ConnectionString;
-        }
 
 
         public void ProcessRequest(HttpContext context)
@@ -65,16 +52,16 @@ SELECT TOP 10 * FROM T_Benutzergruppen;
                 jsonWriter.WriteStartArray();
 
 
-                using (System.Data.SqlClient.SqlConnection con = new System.Data.SqlClient.SqlConnection(GetConnectionString()))
+                using (System.Data.Common.DbConnection con = SQL.CreateConnection())
                 {
                     if (con.State != System.Data.ConnectionState.Open)
                         con.Open();
 
-                    using (System.Data.SqlClient.SqlCommand cmd = con.CreateCommand())
+                    using (System.Data.Common.DbCommand cmd = con.CreateCommand())
                     {
                         cmd.CommandText = strSQL;
 
-                        using (System.Data.SqlClient.SqlDataReader dr = cmd.ExecuteReader(System.Data.CommandBehavior.SequentialAccess
+                        using (System.Data.Common.DbDataReader dr = cmd.ExecuteReader(System.Data.CommandBehavior.SequentialAccess
                              | System.Data.CommandBehavior.CloseConnection
                             ))
                         {
@@ -158,16 +145,16 @@ SELECT TOP 10 * FROM T_Benutzergruppen;
                 jsonWriter.WriteStartObject();
 
 
-                using (System.Data.SqlClient.SqlConnection con = new System.Data.SqlClient.SqlConnection(GetConnectionString()))
+                using (System.Data.Common.DbConnection con = SQL.CreateConnection())
                 {
                     if (con.State != System.Data.ConnectionState.Open)
                         con.Open();
 
-                    using (System.Data.SqlClient.SqlCommand cmd = con.CreateCommand())
+                    using (System.Data.Common.DbCommand cmd = con.CreateCommand())
                     {
                         cmd.CommandText = "SELECT TOP 10000 * FROM T_LOG_SAP_Interface";
 
-                        using (System.Data.SqlClient.SqlDataReader dr = cmd.ExecuteReader(System.Data.CommandBehavior.SequentialAccess
+                        using (System.Data.Common.DbDataReader dr = cmd.ExecuteReader(System.Data.CommandBehavior.SequentialAccess
                              | System.Data.CommandBehavior.CloseConnection
                             ))
                         {
